@@ -1,0 +1,147 @@
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the header */
+  .header {
+    background-color: #333;
+    color: #fff;
+    align-items: center;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Style the logo row */
+  .logo-row {
+    display: flex;
+    justify-content: space-between; /* Distribute the logos with equal spacing */
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+  }
+  
+  /* Style the logos */
+  .logo {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #a3c6e0;
+    flex: 1; /* Distribute space evenly */
+    text-align: center;
+  }
+  .logo-right {
+    flex: 1; /* Prevent it from taking up remaining space */
+    text-align: center;
+  }
+  
+  .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Style the navigation row */
+.nav-row {
+  margin-top: 10px;
+  display: flex;
+  justify-content:space-around;
+}
+
+/* Style the navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content:space-around; /* Spread out the items */
+  width: 100%;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.nav-links li {
+  flex: 1; /* Distribute items evenly */
+  margin: 0;
+  text-align: center; /* Center the content in each item */
+  position: relative; /* To position the borders */
+}
+
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links li:before
+ {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+}
+
+.nav-links li::before {
+  left: -5px; /* Adjust the position of the left border */
+}
+
+.nav-links li::after {
+  right: -5px; /* Adjust the position of the right border */
+}
+
+
+  /* Style the dropdown */
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content a {
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #555;
+  }
+  @media (max-width: 768px) {
+    .logo-row {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      text-align: center;
+      padding: 10px 0;
+    }
+  
+    .nav-links li {
+      margin: 5px 0;
+    }
+  
+    .dropdown-content {
+      position: static;
+      display: none;
+      width: 100%;
+    }
+  
+    .dropdown:hover .dropdown-content {
+      display: block;
+      background-color: #333;
+    }
+  }
